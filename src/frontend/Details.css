@@ -1,0 +1,31 @@
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px;
+}
+.details-img-path img{
+    width: 500px;
+    max-height: 500px;
+}
+.details-divid{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.details-info{
+    margin: 0px 80px;
+}
+
+.add-to-cats{
+   background-color: #DC294C;
+   color: white;
+   font-size: 18px;
+   font-weight: 600;
+   text-transform: capitalize;
+   cursor: pointer;
+}
+.add-to-cats .basket{
+    margin: 0px 0px;
+}

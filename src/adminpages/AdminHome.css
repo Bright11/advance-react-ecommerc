@@ -1,0 +1,53 @@
+.admin-side-bar{
+    flex: 1;
+}
+.admin-main-content{
+    flex: 4;
+}
+
+.adminHome{
+    margin-top: 50px;
+}
+
+.admin-main-content{
+    margin: 0PX 20PX;
+}
+.admin-view-product-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+}
+.admin-view-product-down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid lightslategray;
+   
+}
+
+.admin-view-product-down img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.pro-update button {
+    position: relative;
+    left: 20px;
+    padding: 8px;
+    margin: 0px 5px;
+    outline: none;
+    border: none;
+    background-color: #F82E56;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.admin-view-product-down .price{
+    position: relative;
+    left: 40px;
+}

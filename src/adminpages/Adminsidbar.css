@@ -1,0 +1,15 @@
+.Adminsidbar li{
+list-style: none;
+margin: 0px 8px;
+padding: 10px;
+}
+.Adminsidbar li:hover{
+    background-color: #867e7e;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+.Adminsidbar a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,82 @@
+.Category{
+    display: flex;
+}
+.admin-main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addcategory-dive{
+    display: flex;
+    flex-direction: column;
+}
+.addcategory-dive{
+    max-width: 300px;
+    margin: 0px auto;
+}
+.addcategory-dive input{
+    padding: 10px;
+    margin: 5px 0px;
+    outline: none;
+    border: 1px solid lightgray;
+}
+.addcategory-dive button{
+    padding: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F82E56;
+    color: white;
+    cursor: pointer;
+}
+
+.admin-category-display{
+    margin: 20px 0px;
+}
+.admin-category-display .cart-admin{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F82E56;
+    width: 100%;
+    padding: 8PX;
+    color: white;
+}
+
+.admin-category-display .cart-admin p{
+    margin: 0px 100px;
+}
+
+.cat-admin-down-table{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    border-top: 1px solid lightslategray;
+}
+.cat-admin-down-table p{
+    margin: 0px 60px;
+    padding: 8px;
+}
+.cat-admin-down-table .date{
+    position: relative;
+    left: 80px;
+}
+
+.cat-admin-down-table .delete button{
+    margin: 0px 5px;
+    background-color: #F82E56;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pagename{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagename p{
+    margin: 0px 50px;
+    background-color: #F82E56;
+    padding: 10px;
+    color: white;
+}

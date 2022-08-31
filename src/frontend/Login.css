@@ -1,0 +1,28 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightslategray;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+.login-forms .login-inputs{
+    display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+.login .login-forms .login-inputs .login_inputs{
+    padding: 10px;
+    margin: 8px 0px;
+    width: 250px;
+    outline: none;
+}
+.login-forms .login-inputs button{
+    border: 0px;
+    background-color: #F82E56;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.social-media .social{
+   margin: 0px 8px;
+   background-color: #F82E56;
+   padding: 10px;
+   border-radius: 8px;
+   font-size: 20px;
+   font-weight: bold;
+   color: white;
+}
+.social-media .social:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.footer p{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 300;
+}

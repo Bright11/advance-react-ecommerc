@@ -1,0 +1,227 @@
+.top-nav-bar{
+    display: flex;
+    margin: 0px 20px;
+    border:  0.1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.left-icons-holder{
+    flex: 2;
+    display: flex;
+    justify-content: baseline;
+}
+.left-icons-holder .top-social-icon{
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    color: #F82E56;
+}
+.left-icons-holder .top-social-icon:hover{
+    color: #F82E56;
+}
+.right-content-topbar-holder{
+   display: flex;
+   justify-content: baseline;
+   flex-wrap: wrap;
+}
+
+.number-top-holder{
+    display: flex;
+    flex-wrap: wrap;
+}
+.number-top-holder{
+    display: flex;
+    align-items: center;
+    
+}
+.top-social-icon:hover{
+    color: #F82E56;
+}
+.right-content-topbar-holder .top-social-icon{
+    padding: 5px;
+    color: #F82E56;
+    cursor: pointer;
+}
+.right-content-topbar-holder .number-top-holder:hover{
+    color: #F82E56;
+}
+
+/* secondnav */
+.mainlast-navbar-cart-nav{
+    display: flex;
+    width: 100%;
+}
+.main-nav-last-holder{
+    display: flex;
+    justify-content: space-around;
+}
+.second-top-nav{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+.second-top-nav .logo img{
+    width: 40px;
+    object-fit: contain;
+    padding: 5px;
+    border-radius: 50%;
+   
+}
+.search-top-form{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    bottom: 8px;
+   
+}
+.search-top-form input{
+    padding: 14px;
+    outline: none;
+    border: none;
+    border: 1px solid #F8F8F8;
+    background-color: #F9F9F9;
+    box-shadow: none;
+    border-bottom: 1px solid #F82E56;
+}
+.search-top-form .search-submit{
+    padding: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+   
+}
+.search-top-form .search-submit:hover{
+    color: white;
+}
+.search-top-form button{
+    border: none;
+    outline: none;
+    background-color: #F82E56;
+    cursor: pointer;
+
+}
+.search-top-form button:hover .search-submit{
+    color: white;
+}
+.top-bar-brand{
+    display: flex;
+    justify-content: baseline;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    flex-wrap: wrap;
+    margin: 0px 2px;
+}
+.top-bar-brand p{
+    position: relative;
+    top: 11px;
+    margin: 0px 5px;
+}
+.top-bar-brand p:hover{
+    color: #F82E56;
+}
+.top-bar-brand .second-nav-icon{
+    color: #F82E56;
+    background-color: lightgray;
+    padding: 15px;
+    align-items: center;
+    border-radius: 50%;
+   
+}
+.top-bar-brand .second-nav-icon:hover{
+    background-color: #F82E56;
+    color: white;
+}
+
+
+/* lastnav */
+/* .try{
+    background-image: radial-gradient(at center center, #2d7e9270 0%,#1c40617c 100%), url('');
+} */
+.mynav{
+    display: flex;
+    justify-content:space-around;
+    min-height: 8vh;
+    background-color: #F8F8F8;
+    padding: 5px;
+    align-items: center;
+    margin: 10px 10px;
+}
+.logo{
+    flex: 1;
+}
+.mymobil-icon{
+    font-size: 20px;
+    display: none;
+  
+}
+.basket-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basket{
+    margin: 0px 8px;
+}
+.basket-cart p{
+    background-color: #F82E56;
+    color: white;
+    border-radius: 100%;
+    padding: 8px;
+    margin: 0px 15px 0px 0px;
+    font-size: 20;
+    font-weight: 600;
+}
+.navlinks{
+    display: flex;
+    flex: 4;
+    list-style: none;
+    justify-content:flex-end;
+    /* align-items:flex-start; */
+  
+}
+.navlinks li{
+    margin: 0px 10px;
+    padding: 6px 6px 6px 6px;
+}
+.navlinks li:hover{
+    background-color: #F82E56;
+    color: white;
+}
+@media only screen and (max-width: 720px) {
+    body{
+        overflow-x: hidden;
+    }
+    .top-bar-brand{
+        display: none;
+    }
+    .mymobil-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .navlinks{
+        position: absolute;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        width: 100%;
+        top: 45vh;
+        background-color: teal;
+        font-size: 20px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .active{
+        transform: translateX(0%);
+    }
+}
+
+/* @media only screen and (max-width: 520px) {
+    
+  } */
