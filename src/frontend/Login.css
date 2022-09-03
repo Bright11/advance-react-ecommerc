@@ -26,3 +26,12 @@
     color: white;
     cursor: pointer;
 }
+.clickto-register{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    color: #F82E56;
+    margin: 8px 0px;
+    font-size: 18px;
+}

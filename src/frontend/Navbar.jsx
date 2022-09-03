@@ -26,6 +26,7 @@ import {
   DragHandleSharp,
   DragIndicator,
   DragHandleRounded,
+  MenuSharp,
 } from "@material-ui/icons";
 import React, { useState } from "react";
 import "./Navbar.css";
@@ -122,6 +123,7 @@ function Navbar({ user, handleLogout }) {
           <li>
             <Link to="/">Contact us</Link>
           </li>
+          <li> {user?.displayName}</li>
           {userId ? (
             <>
               <li>
@@ -129,7 +131,6 @@ function Navbar({ user, handleLogout }) {
                   Logout
                 </Link>
               </li>
-              <li>{user?.username}</li>
             </>
           ) : (
             <>
@@ -146,7 +147,7 @@ function Navbar({ user, handleLogout }) {
         </div>
 
         <div className="mymobil-icon" onClick={handlenavmobile}>
-          <DragHandleRounded />
+          <MenuSharp />
         </div>
       </nav>
     </div>

@@ -11,6 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { ThemeProvider } from "@material-ui/core";
 
 const initialState = {
   username: "",
@@ -27,7 +28,7 @@ function Login() {
 
   const { username, fullname, email, password, confirmp } = form;
   const naviget = useNavigate();
-  //   const [profile, setProfile] = useState(null);
+  const [profile, setProfile] = useState(null);
   useEffect(() => {
     const uploadFile = () => {
       const name = new Date().getTime() + file.name;
@@ -57,7 +58,7 @@ function Login() {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
             setForm((prev) => ({ ...prev, profile: downloadUrl }));
-            // setProfile(profile);
+            setProfile(downloadUrl);
             return toast.success("profile uploaded successfully");
           });
           return toast.info("upload is runing please wait");
@@ -66,6 +67,7 @@ function Login() {
     };
     file && uploadFile();
   }, [file]);
+  console.log("profile", profile);
   const handlechang = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -94,16 +96,15 @@ function Login() {
             email,
             password
           );
-          //   await setDoc(doc(db, "users", user.uid), {
-          //     setForm(form );
-          //     timeStamp: serverTimestamp(),
-          //   });
-          //   await updateProfile(user, {
-          await updateProfile(user, { username: `${username}` });
-          //   });
-          toast.success("success registered");
-          naviget("/");
+          await updateProfile(user, {
+            displayName: username,
+            userprofile: profile,
+          }).then(() => {
+            toast.success("Registration completed");
+            naviget("/");
+          });
         }
+        // toast.success("Registration completed");
       } else {
         toast.error("Most forms are empty");
       }
@@ -201,11 +202,15 @@ function Login() {
         </form>
         {!register ? (
           <>
-            <p onClick={() => setRegister(true)}>Register</p>
+            <p className="clickto-register" onClick={() => setRegister(true)}>
+              Register
+            </p>
           </>
         ) : (
           <>
-            <p onClick={() => setRegister(false)}>Login</p>
+            <p className="clickto-register" onClick={() => setRegister(false)}>
+              Login
+            </p>
           </>
         )}
       </div>
