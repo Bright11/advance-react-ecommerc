@@ -101,7 +101,7 @@ function Addproduct() {
         try {
           await updateDoc(doc(db, "products", updatepro), {
             ...form,
-            timestamp: serverTimestamp(),
+            timestamp: new Date(), //serverTimestamp(),
           });
           navigate("/admin");
           return toast.success("Product updated");

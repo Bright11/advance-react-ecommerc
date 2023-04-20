@@ -1,6 +1,7 @@
 .myshop{
     display: flex;
     margin: 40px 0px;
+    flex-wrap: wrap;
 }
 
 .mainshop{
@@ -74,6 +75,7 @@
    font-weight: 600;
    text-transform: capitalize;
    cursor: pointer;
+   flex-wrap: wrap;
 }
 .add-to-cat .basket{
     margin: 0px 5px;

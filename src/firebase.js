@@ -5,12 +5,12 @@ import {getStorage} from 'firebase/storage';
 import {getAuth} from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "apiKey",
+  apiKey: "AIzaSyDY-BzDSOB7B-PPQ2iC3EeKRWuB6jrB23w",
   authDomain: "react-best-ecommecs.firebaseapp.com",
-  projectId: "projectId",
-  storageBucket: " storageBucket",
+  projectId: "react-best-ecommecs",
+  storageBucket: "react-best-ecommecs.appspot.com",
   messagingSenderId: "296587338668",
-  appId: " appId"
+  appId: "1:296587338668:web:4bee277f4ee54bf642d009"
 };
 
 

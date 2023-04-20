@@ -27,23 +27,26 @@ import {
   DragIndicator,
   DragHandleRounded,
   MenuSharp,
+  Close,
 } from "@material-ui/icons";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Navbar.css";
 import logo from "./logo/logo.jpg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 function Navbar({ user, handleLogout }) {
   const userId = user?.uid;
   //const [mobilenav, setMobilenav] = useState(false);
   const { cartTotalQuantity } = useSelector((state) => state.cart);
-  const [active, setactive] = useState(false);
+  // const [active, setactive] = useState(false);
 
-  function handlenavmobile() {
-    setactive(!active);
-  }
-  let moblinavopen = active ? "active" : null;
+  // function handlenavmobile() {
+  //   setactive(!active);
+  // }
+  // let moblinavopen = active ? "active" : null;
 
+  //const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="navbar">
       <div className="top-nav-bar">
@@ -100,7 +103,7 @@ function Navbar({ user, handleLogout }) {
         </div>
       </div>
       {/* lastnav  navlinks  {renderclass()} */}
-      <nav className="mynav">
+      {/* <nav className="mynav">
         <div className="logo">
           <Link to="/">
             <h3>Bright C Web</h3>
@@ -149,7 +152,58 @@ function Navbar({ user, handleLogout }) {
         <div className="mymobil-icon" onClick={handlenavmobile}>
           <MenuSharp />
         </div>
-      </nav>
+      </nav> */}
+      <header>
+        <div className="logoname">Bright C Web</div>
+        <input className="toggler" type="checkbox" id="toggler" />
+        <label htmlFor="toggler" className="burger">
+          <MenuSharp />
+        </label>
+
+        <Link to="/mycart" className="mycart-count-holder">
+          <ShoppingBasket className="basket" />
+          <p> ({cartTotalQuantity})</p>
+        </Link>
+
+        <nav className="mylastnavbar">
+          <ul>
+            {/* <div className="myul-holder"> */}
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li>
+              <Link to="/admin">Admin</Link>
+            </li>
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
+            <li>
+              <Link to="/">About us</Link>
+            </li>
+            <li>
+              <Link to="/">Contact us</Link>
+            </li>
+            <li>
+              <Link to="#">{user?.displayName}</Link>
+            </li>
+            {userId ? (
+              <>
+                <li>
+                  <Link to="/login" onClick={handleLogout}>
+                    Logout
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <Link to="/login">Login</Link>
+              </>
+            )}
+            {/* </div> */}
+          </ul>
+        </nav>
+      </header>
     </div>
   );
 }

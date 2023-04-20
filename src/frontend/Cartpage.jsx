@@ -10,10 +10,15 @@ import { useSelector } from "react-redux";
 import { Delete, Remove } from "@material-ui/icons";
 import { useDispatch } from "react-redux/es/exports";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
+import { toast } from "react-toastify";
 
 function Cartpage() {
   const cart = useSelector((state) => state.cart);
+//const [checkout, setCheckout] = useState([]);
+
   useEffect(() => {
     dispatch(gettingTotal());
   }, [cart]);
@@ -32,8 +37,23 @@ function Cartpage() {
   const handleremovefromcart = (cartItems) => {
     dispatch(RemoveFromCart(cartItems));
   };
+  //setCheckout(cart)
+  console.log("all cart", cart)
+  const handlechecout= async() => {
+    try {
+      await addDoc(collection(db, "checout"),{
+        ...cart,
+        username:"Chika",
+      })
+       return toast.success("Product uploaded successfully");
+    } catch (e) {
+      
+    }
+  }
   return (
     <div className="cartpage">
+      <button onClick={handlechecout}>Checkout</button>
+      <Link to="/order">Orders</Link>
       {cart.cartItems.length === 0 ? (
         <div className="clear-cart">
           <p>Your cart is empty</p>
@@ -44,6 +64,7 @@ function Cartpage() {
       ) : (
         <div className="clear-cart">
           <button onClick={() => handleclearcart()}>Clear All Cart</button>
+
           <h1>My cart items</h1>
           <button>Total ${cart.cartTotalAmount}</button>
         </div>

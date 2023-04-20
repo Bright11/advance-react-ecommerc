@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    margin-bottom: 80px;
+}
+
 .top-nav-bar{
     display: flex;
     margin: 0px 20px;
@@ -142,7 +151,7 @@
 /* .try{
     background-image: radial-gradient(at center center, #2d7e9270 0%,#1c40617c 100%), url('');
 } */
-.mynav{
+/* .mynav{
     display: flex;
     justify-content:space-around;
     min-height: 8vh;
@@ -150,6 +159,8 @@
     padding: 5px;
     align-items: center;
     margin: 10px 10px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .logo{
     flex: 1;
@@ -181,7 +192,6 @@
     flex: 4;
     list-style: none;
     justify-content:flex-end;
-    /* align-items:flex-start; */
   
 }
 .navlinks li{
@@ -192,9 +202,14 @@
     background-color: #F82E56;
     color: white;
 }
-@media only screen and (max-width: 720px) {
+/* body{
+    overflow-x: hidden !important;
+} */
+/* @media only screen and (max-width: 720px) {
+   
     body{
-        overflow-x: hidden;
+        overflow-x:hidden;
+        width: 100%;
     }
     .top-bar-brand{
         display: none;
@@ -205,23 +220,157 @@
     }
     .navlinks{
         position: absolute;
-        right: 0px;
+        /* position:inherit; */
+        /* right: 0px;
         display: flex;
         flex-direction: column;
-        
         align-items: center;
         width: 100%;
+        overflow-x: hidden;
         top: 45vh;
+        white-space: nowrap; 
         background-color: teal;
         font-size: 20px;
         transform: translateX(100%);
+       
         transition: transform 0.5s ease-in;
     }
     .active{
         transform: translateX(0%);
     }
+}  */ 
+header{
+    text-align: center;
+    /* position: fixed; */
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #FFFFFF; */
+}
+.toggler{
+    display: none;
 }
 
-/* @media only screen and (max-width: 520px) {
+.logoname{
+    display: flex;
+    margin: 0px 8px;
+    z-index: 100;
+    font-size: 20px;
+    font-weight: 300;
+}
+.mylastnavbar ul{
+    /* position: fixed; */
+    position: absolute;
+    /* width: 100%;; */
+    width: auto;
+    /* height: 100vh; */
+    height: auto;
+    padding: 16px;
+    background-color:lightgray;
+    left: -100%;
+    transition: all .5s;
+    list-style: none;
+    margin-top: 20px;
+}
+/* .mylastnavbar ul .myul-holder{
+    background-color: lightslategray;
+} */
+.mylastnavbar li{
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.mylastnavbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.658);
+    text-transform: uppercase;
+}
+.mylastnavbar a:hover{
+    color: rgb(91, 180,253);
+    transform: ease-in .1s;
+}
+.toggler:checked ~ nav ul{
+    left: 0;
+}
+.burger{
+    position: absolute;
+    font-size: 35px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.658);
+    top: 0;
+    right: 0;
+    margin-right: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.mycart-count-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.mycart-count-holder p{
+    background-color: #F82E56;
+    color: white;
+    border-radius: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.basket{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* media query for desktop */
+@media screen and (min-width:800px) {
+    .burger{
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(700px, 3fr);
+    }
+    .mylastnavbar{
+        display: flex;
+        grid-column: 3/4;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .mylastnavbar ul{
+        all: unset;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        /* my */
+        justify-content: flex-end;
+        width: 100%;
+        height: 80px;
+        padding: 16px;
+        
+    }
+    header{
+        text-align: center;
+        position: static;
+        width: 100%;
+        z-index: 100;
+        /* background-color: #FFFFFF; */
+    }
     
-  } */
+}
+  
+@media only screen and (max-width: 800px) {
+    
+  }

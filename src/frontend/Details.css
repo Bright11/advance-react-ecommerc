@@ -3,21 +3,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 50px;
+    margin: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .details-img-path img{
-    width: 500px;
+    width: 100%;
     max-height: 500px;
 }
+
 .details-divid{
     display: flex;
     justify-content: space-between;
     margin: 0px auto;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .details-info{
-    margin: 0px 80px;
+    margin: 0px 20px;
 }
-
+.details-info>h1{
+    font-size: 12px;
+}
 .add-to-cats{
    background-color: #DC294C;
    color: white;

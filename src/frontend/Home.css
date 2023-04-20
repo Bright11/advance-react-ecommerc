@@ -1,5 +1,9 @@
+:root{
+    --background-color: #F82E80;
+}
 .home{
-    margin-top: 50px;
+    margin: 30px auto;
+    max-width: 80vw;
 }
 .home-product{
     display: grid;
@@ -8,7 +12,8 @@
     justify-content: center;
 }
 .home-items-holder{
-    margin: 10px 20px;
+  position: relative;
+    margin: 10px 0px 30px 0px;
     border: 1px solid lightgray;
 }
 .home-items-holder:hover{
@@ -35,7 +40,7 @@
     position: relative;
     bottom: 150px;
     margin: auto;
-    background-color: #F82E80;
+    background-color: var(--background-color);
     color: white;
     text-align: center;
     padding: 8px;
@@ -45,9 +50,19 @@
     margin: 0px 3px;
 }
 .home-items-holder h1, .price{
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 600;
     text-align: center;
+}
+.cartbutton{
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 2px;
+    left: 2px;
+}
+.home-items-holder:hover .cartbutton{
+    display: block;
 }
 .add-to-cat{
     display: flex;
@@ -57,7 +72,7 @@
    text-align: center;
    margin: 8px auto;
    border: 0px;
-   background-color: #DC294C;
+   background-color: var(--background-color);
    color: white;
    font-size: 18px;
    font-weight: 600;

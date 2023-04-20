@@ -34,7 +34,7 @@ function Details() {
           <img src={alldetails?.image} alt="" />
         </div>
         <div className="details-info">
-          <h>Product information</h>
+          <h1>Product information</h1>
           <hr />
           <h1>{alldetails?.product_name}</h1>
           <hr />

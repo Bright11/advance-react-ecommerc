@@ -24,7 +24,7 @@ function ShopCategory() {
       const querySnapshot = await getDocs(allact);
       let shopcat = [];
       querySnapshot.forEach((doc) => {
-        shopcat.push({ di: doc.id, ...doc.data() });
+        shopcat.push({ id: doc.id, ...doc.data() });
       });
       setShopcat(shopcat);
     };

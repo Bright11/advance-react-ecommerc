@@ -10,7 +10,7 @@ function Footer() {
         <YouTube className="social" />
         <Twitter className="social" />
       </div>
-      <p>All Right resver: Bright c web developer</p>
+      <p>All Right resver: Bright c web developer +233558602996</p>
     </div>
   );
 }

@@ -51,14 +51,16 @@ function Home() {
             <h1>{item.product_name}</h1>
             <p className="price">Price&nbsp;${item.price}</p>
 
-            <button
-              type="submit"
-              className="add-to-cat"
-              onClick={() => handleAddTocart(item)}
-            >
-              <ShoppingBasket className="basket" />
-              Add to cat
-            </button>
+            <div className="cartbutton">
+              <button
+                type="submit"
+                className="add-to-cat"
+                onClick={() => handleAddTocart(item)}
+              >
+                <ShoppingBasket className="basket" />
+                Add to cat
+              </button>
+            </div>
           </div>
         ))}
       </div>
